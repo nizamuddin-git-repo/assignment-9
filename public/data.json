@@ -1,0 +1,122 @@
+[
+    {
+        "id": 1,
+        "estate_title": "Maple Grove Single-Family Home",
+        "relevant_image": "https://example.com/images/maple_grove_home.jpg",
+        "segment_name": "Single-Family Home",
+        "description": "A beautiful 4-bedroom single-family home with a large backyard and modern interiors, perfect for a growing family.",
+        "price": 550000,
+        "status": "Available",
+        "area": "2500 sqft",
+        "location": "Dallas, TX",
+        "facilities": ["Garage", "Backyard", "Nearby Schools", "Community Park", "Pet-Friendly"]
+    },
+    {
+        "id": 2,
+        "estate_title": "Riverside Townhouse",
+        "relevant_image": "https://example.com/images/riverside_townhouse.jpg",
+        "segment_name": "Townhouse",
+        "description": "A modern 3-bedroom townhouse located near the river, featuring spacious living areas and a private terrace.",
+        "price": 350000,
+        "status": "Available",
+        "area": "1800 sqft",
+        "location": "Portland, OR",
+        "facilities": ["Garage", "Private Terrace", "Riverside Walk", "Gated Community", "Pet-Friendly"]
+    },
+    {
+        "id": 3,
+        "estate_title": "Downtown Apartments",
+        "relevant_image": "https://example.com/images/downtown_apartments.jpg",
+        "segment_name": "Apartment",
+        "description": "Luxury 2-bedroom apartments in the heart of the city, offering stunning skyline views and modern amenities.",
+        "price": 450000,
+        "status": "Available",
+        "area": "1200 sqft",
+        "location": "New York, NY",
+        "facilities": ["Rooftop Garden", "Fitness Center", "Concierge Service", "Parking Garage", "24/7 Security"]
+    },
+    {
+        "id": 4,
+        "estate_title": "Campus View Student Housing",
+        "relevant_image": "https://example.com/images/campus_view.jpg",
+        "segment_name": "Student Housing",
+        "description": "Affordable student housing located just steps away from the university, offering shared and private rooms.",
+        "price": 1200,
+        "status": "Available",
+        "area": "300 sqft per room",
+        "location": "Boston, MA",
+        "facilities": ["Study Rooms", "Common Areas", "Wi-Fi", "Laundry Facilities", "24/7 Security"]
+    },
+    {
+        "id": 5,
+        "estate_title": "Sunset Ridge Senior Living Community",
+        "relevant_image": "https://example.com/images/sunset_ridge.jpg",
+        "segment_name": "Senior Living Community",
+        "description": "A peaceful senior living community offering 1 and 2-bedroom apartments with access to healthcare and recreational activities.",
+        "price": 2000,
+        "status": "Available",
+        "area": "800 sqft",
+        "location": "Scottsdale, AZ",
+        "facilities": ["On-site Healthcare", "Fitness Center", "Recreational Activities", "Community Dining", "24/7 Assistance"]
+    },
+    {
+        "id": 6,
+        "estate_title": "Lakeside Vacation Rentals",
+        "relevant_image": "https://example.com/images/lakeside_vacation.jpg",
+        "segment_name": "Vacation Rental",
+        "description": "Cozy 2-bedroom cottages available for vacation rentals, located by the lake with private docks and outdoor activities.",
+        "price": 1500,
+        "status": "Available",
+        "area": "1100 sqft",
+        "location": "Lake Tahoe, CA",
+        "facilities": ["Private Dock", "Fireplace", "Outdoor Activities", "Pet-Friendly", "Wi-Fi"]
+    },
+    {
+        "id": 7,
+        "estate_title": "Pinewood Single-Family Home",
+        "relevant_image": "https://example.com/images/pinewood_home.jpg",
+        "segment_name": "Single-Family Home",
+        "description": "A spacious 5-bedroom single-family home with a large garden, located in a quiet suburban neighborhood.",
+        "price": 600000,
+        "status": "Under Contract",
+        "area": "3000 sqft",
+        "location": "Atlanta, GA",
+        "facilities": ["Garage", "Large Garden", "Playground", "Nearby Schools", "Pet-Friendly"]
+    },
+    {
+        "id": 8,
+        "estate_title": "Greenwood Townhouses",
+        "relevant_image": "https://example.com/images/greenwood_townhouse.jpg",
+        "segment_name": "Townhouse",
+        "description": "Elegant 3-bedroom townhouses with modern interiors and a small private garden, located in a gated community.",
+        "price": 400000,
+        "status": "Available",
+        "area": "2000 sqft",
+        "location": "Seattle, WA",
+        "facilities": ["Private Garden", "Garage", "Gated Community", "Community Pool", "Pet-Friendly"]
+    },
+    {
+        "id": 9,
+        "estate_title": "Ocean Breeze Apartments",
+        "relevant_image": "https://example.com/images/ocean_breeze.jpg",
+        "segment_name": "Apartment",
+        "description": "Stylish 1-bedroom apartments located near the beach, offering a relaxed lifestyle with ocean views.",
+        "price": 300000,
+        "status": "Sold Out",
+        "area": "900 sqft",
+        "location": "Miami, FL",
+        "facilities": ["Beach Access", "Swimming Pool", "Fitness Center", "Parking Garage", "24/7 Security"]
+    },
+    {
+        "id": 10,
+        "estate_title": "Sunset Hills Senior Living",
+        "relevant_image": "https://example.com/images/sunset_hills.jpg",
+        "segment_name": "Senior Living Community",
+        "description": "A senior living community with 1-bedroom apartments, offering a serene environment with healthcare services on-site.",
+        "price": 1800,
+        "status": "Available",
+        "area": "700 sqft",
+        "location": "Tampa, FL",
+        "facilities": ["On-site Healthcare", "Recreational Activities", "Community Dining", "24/7 Assistance", "Pet-Friendly"]
+    }
+]
