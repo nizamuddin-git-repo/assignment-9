@@ -6,6 +6,7 @@ import Register from "../Pages/Register";
 import About from "../Pages/About";
 import Contact from "../Pages/Contact";
 import NotFound from "../Pages/NotFound";
+import PropertyDetails from "../Pages/PropertyDetails";
 
 const router = createBrowserRouter([
     {
@@ -16,6 +17,7 @@ const router = createBrowserRouter([
         {
             path: '/',
             element: <Home></Home>,
+            loader: () => fetch("/data.json"),
         },
         {
             path: '/login',
@@ -26,13 +28,19 @@ const router = createBrowserRouter([
             element: <Register></Register>,
         },
         {
-            path: '/property',
-            element: <About></About>
+            path: '/about',
+            element: <About></About>,
+            loader: ()=> fetch("/data.json"),
         },
         {
-            path: '/',
-            element: <Contact></Contact>
-        }
+            path: '/contact',
+            element: <Contact></Contact>,
+        },
+        {
+            path: '/property/:id',
+            element: <PropertyDetails></PropertyDetails>,
+            loader: ()=> fetch('/data.json')
+        },
       ],
     },
 ])

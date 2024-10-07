@@ -3,14 +3,20 @@ import Navbar from "./Navbar";
 import { Link } from "react-router-dom";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { useForm } from "react-hook-form";
-import { useContext } from "react";
-import { AuthContext } from "./Provider/AuthProvider";
+import { IoMdContact } from "react-icons/io";
+import { FaImages } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
+import { FaLock } from "react-icons/fa";
+import useAuth from "../../hooks/useAuth";
+
+
+
 
 const Register = () => {
+  const {createUser} = useAuth()
   const [registerError, setRegisterError] = useState("");
   const [success, setSuccess] = useState("");
   const [showPassword, setShowPassword] = useState(false);
-  const {createUser} = useContext(AuthContext);
 
 
   const {
@@ -30,8 +36,6 @@ const Register = () => {
       console.log(error)
     })
   }
-
-
 
   const handleRegister = (e) => {
     e.preventDefault();
@@ -57,19 +61,21 @@ const Register = () => {
       return;
     }
   };
+  
   return (
     <div>
       <Navbar></Navbar>
       <div className="flex justify-center">
       <div className="mt-10 w-1/2">
         <h2 className="text-3xl p-4 text-center">Please Register</h2>
-        <form onSubmit={handleSubmit(onSubmitRegister)} className="shadow-2xl p-6 rounded-2xl mt-5">
+        <form onSubmit={handleSubmit(onSubmitRegister)} className="border-2 p-8 rounded-2xl mt-4">
           <div className="relative">
           <label className="label">
               <span className="label-text">Name</span>
             </label>
+            <IoMdContact className="absolute mt-3 text-2xl ml-1"></IoMdContact>
             <input
-              className=" w-full py-2 px-4 rounded-lg input input-bordered"
+              className=" w-full py- px-8 rounded-lg input input-bordered"
               type="text"
               name="name"
               placeholder="Name"
@@ -78,8 +84,9 @@ const Register = () => {
             {errors.name && <span className="text-red-600">This field is required</span>}
             <br />
              <span className="label-text mt-3">Photo URL</span>
+             <FaImages className="absolute mt-3 text-2xl ml-1"></FaImages>
             <input
-              className="w-full py-2 px-4 rounded-lg input input-bordered"
+              className="w-full py-2 px-8 rounded-lg input input-bordered"
               type="text"
               name="photo"
               placeholder="Photo URL"
@@ -88,8 +95,9 @@ const Register = () => {
             {errors.photo && <span className="text-red-600">This field is required</span>}
             <br />
               <span className="label-text">Email</span>
+              <MdEmail className="absolute mt-3 text-2xl ml-1"></MdEmail>
             <input
-              className="w-full py-2 px-4 rounded-lg input input-bordered"
+              className="w-full py-2 px-8 rounded-lg input input-bordered"
               type="email"
               name="email"
               placeholder="Email Adderss"
@@ -98,8 +106,9 @@ const Register = () => {
             {errors.email && <span className="text-red-600">This field is required</span>}
             <br />
               <span className="label-text">Password</span>
+              <FaLock className="absolute mt-4 text-xl ml-1"></FaLock>
             <input
-              className="w-full py-2 px-4 rounded-lg mt-1 input input-bordered"
+              className="w-full py-2 px-8 rounded-lg mt-1 input input-bordered"
               type={showPassword ? "test" : "password"}
               name="password"
               placeholder="Password"
@@ -113,9 +122,10 @@ const Register = () => {
             >
               <div className="flex justify-end mt-4 relative">
                 {showPassword ? (
-                  <FaEyeSlash className="text-2xl"></FaEyeSlash>
+                   <Link><FaEye className="text-2xl"></FaEye></Link>
+                  
                 ) : (
-                  <FaEye className="text-2xl"></FaEye>
+                  <Link><FaEyeSlash className="text-2xl"></FaEyeSlash></Link>
                 )}
               </div>
             </span>

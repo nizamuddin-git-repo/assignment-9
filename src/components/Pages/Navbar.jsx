@@ -1,10 +1,13 @@
 import { Link, NavLink } from "react-router-dom";
 import { FaHome } from "react-icons/fa";
 import { useContext } from "react";
-import { AuthContext } from "./Provider/AuthProvider";
+import useAuth from "../../hooks/useAuth";
 
 const Navbar = () => {
-  const {user} = useContext(AuthContext);
+  const {user,logOut} = useAuth();
+  console.log(user);
+
+ 
   
   const navLink = (
     <>
@@ -40,12 +43,12 @@ const Navbar = () => {
       </li>
       <li>
         <NavLink
-          to="/property"
+          to="/about"
           className={({ isActive }) =>
             isActive ? "text-black font-bold bg-success py-3" : "font-semibold py-3"
           }
         >
-          Property
+          About
         </NavLink>
       </li>
       <li>
@@ -99,7 +102,17 @@ const Navbar = () => {
           <ul className="menu menu-horizontal px-1 gap-3">{navLink}</ul>
         </div>
         <div className="navbar-end">
-          <Link to='/login' className="btn  btn-outline btn-success">Login</Link>
+        {
+          user ? <>
+          
+          <span>{user.email}</span>
+          <button onClick={() => logOut()} className="btn btn-outline btn-error ">LogOut</button>
+          
+          </> 
+          : <Link to="/login"> 
+          <button className="btn  btn-success">Login</button>
+          </Link>
+        }
         </div>
       </div>
     </div>

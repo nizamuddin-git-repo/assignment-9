@@ -1,7 +1,9 @@
 import React from 'react';
 import Navbar from './Navbar';
+import { useLoaderData } from 'react-router-dom';
 
 const About = () => {
+    const propertyId = useLoaderData()
     return (
         <div>
             <Navbar></Navbar>
